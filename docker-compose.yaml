@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  app:
+    container_name: app
+    stdin_open: true
+    tty: true
+    build: .
+    working_dir: /app/project/tests
+    volumes:
+      - ./project/:/app/project/
