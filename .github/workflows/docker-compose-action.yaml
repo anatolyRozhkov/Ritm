@@ -17,14 +17,7 @@ jobs:
         run: |
           docker-compose up -d
 
-      - name: Execute Commands in Docker Container
+      - name: Run Tests
         run: |
           docker exec app pytest -sv --tb long
         id: pytest
-
-      - name: Display Pytest Results
-        run: |
-          echo "Pytest Results:"
-          echo "${{ steps.pytest.outputs.stdout }}"
-        env:
-          STEPS_PYTEST: ${{ steps.pytest.outputs.stdout }}
