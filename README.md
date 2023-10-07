@@ -5,7 +5,9 @@ https://reqres.in/api-docs/
 <h3>Usage</h3>
 ```
 docker-compose up -d --build
+
 docker exec -it app bash
+
 pytest -sv --tb long
 ```
 
